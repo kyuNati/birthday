@@ -1,0 +1,138 @@
+<!-- Created by <BernieByte> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff9a9e;
+            top: 0;
+            left: 50%;
+            opacity: 0;
+            transform-origin: center;
+            animation: fall 3s linear infinite;
+        }
+        .confetti:nth-child(odd) {
+            background-color: #fad0c4;
+        }
+        .confetti:nth-child(2n) {
+            animation-delay: -2s;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .btn {
+            margin-top: 20px;
+            background-color: #ff9a9e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #f76c6c;
+        }
+        .more-info {
+            display: none;
+            margin-top: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+        audio {
+            display: none;
+        }
+        .audio-btn {
+            background-color: #00bfff;
+            margin-top: 10px;
+        }
+        .audio-btn:hover {
+            background-color: #008cba;
+        }
+    </style>
+    </head>
+    <body>
+    
+    <div class="card">
+        <h1>🎂 Chúc mừng sinh nhật nhé vợ yêuu 🎉</h1>
+        <p class="message">Chúc em may mắn và vui vẻ trong hôm nay nhé :3!</p>
+        <button class="btn" onclick="toggleInfo()">Bấm vô đây để đọc tin nhắn anh gửi cho nhé</button>
+        <div class="more-info">
+            <p>Cố lên nhé rồi mọi thứ rồi cũng đều tốt hơn thôi, rồi chúng ta sẽ cùng lên Hà nội với nhau và cùng bắt đầu cuộc sống mới! 🎈</p>
+            <p>Đây là tin nhắn anh Tuấn đẹp troai gửi iem</p>
+        </div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <button class="btn audio-btn" onclick="playSfx()"> bấm vô để skibidi toilet</button>
+        <audio id="bg-audio" autoplay loop>
+            <source src="https://firebasestorage.googleapis.com/v0/b/birtday-691ca.appspot.com/o/1I8I4EG5M_BO9VJQ%20(1).mp3?alt=media&token=2fa92593-9085-48f5-af23-dd60ff2dc134" type="audio/mpeg">
+         Your browser does not support the audio element.
+    </audio>
+    <audio id="sfx-audio">
+        <source src="https://firebasestorage.googleapis.com/v0/b/birtday-691ca.appspot.com/o/1I8I4P1N6_BO9VJQ.mp3?alt=media&token=6959c9db-673a-413f-8209-2a6d3a4612fc" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<script>
+    function toggleInfo() {
+        var info = document.querySelector('.more-info');
+        if (info.style.display === 'none' || info.style.display === '') {
+            info.style.display = 'block';
+        } else {
+            info.style.display = 'none';
+        }
+    }
+
+    function playSfx() {
+        var sfx = document.getElementById('sfx-audio');
+        sfx.play();
+    }
+</script>
+
+</body>
+</html>
