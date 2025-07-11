@@ -1,0 +1,30 @@
+body {
+text-align: center;
+ font-family: 'Open Sans', sans-serif;
+ background: linear-gradient(135deg, #ffd3a5, #fd6585);
+ }
+ button {
+ border-radius: 15px; 
+ font-size: 20px;
+ }
+ .chu2 {
+  border-radius: 15px;
+  background-color: orange;
+ }
+ .thu {
+  border: solid  5px orange;
+ }
+ #loi {
+ background-color: white;
+ padding: 20px;
+ border-radius: 15px;
+ }
+ button {
+ padding: 10px;
+ font-size: 20px;
+ margin-right: 10px;
+ border-radius: 15px;
+ }
+ h2 {
+  color: white;
+ }
